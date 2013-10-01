@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Paint Application</title>
+<style type="text/css">
+caption {caption-side:bottom;color:white}
+#canvas, #canvas2 {position:absolute;left:300px;top:0px;border:4px solid black;cursor:nw-resize;}
+#rect{position:absolute;left:10px;top:150px;}
+#cir{position:absolute;left:10px;top:180px;}
+#lin{position:absolute;left:10px;top:210px;}
+#pen{position:absolute;left:10px;top:240px;}
+#clr{position:absolute;left:10px;top:270px;}
+#tab1{position:absolute;left:10px;top:350px;}
+#tab2{position:absolute;left:10px;top:380px;}
+#tab3{position:absolute;left:10px;top:410px;}
+#lab1{position:absolute;left:150px;top:240px;color:white;}
+#lab2{position:absolute;left:150px;top:270px;color:white;}
+h1{position:absolute;left:80px;top:27px;color:WhiteSmoke;font-size:300%}
+</style>
+</head>
+<body>
+	<h1>PAINT</h1>
+	<canvas id="canvas" width="1100" height="900" style=" background-color:LavenderBlush;" ></canvas>
+	<canvas id="canvas2" width="1100" height="900"></canvas>
+
+	<button id="rect" type="button" onclick="new_tool('rectangle')">RECTANGLE</button>
+	<button id="cir" type="button" onclick="new_tool('circle')">CIRCLE</button>
+	<button id="lin" type="button" onclick="new_tool('line')">LINE</button>
+	<button id="pen" type="button" onclick="new_tool('pencil')">PENCIL</button>
+	<button id="clr" type="button" onclick="clears()">CLEAR</button>
+
+	<label id=lab1>Choose-FillStyle<input type="checkbox" id="fill"/></label>
+	<label id=lab2>Choose-Border<input type="checkbox" id="boarder" checked="checked"/></label>
+
+ <table id="tab1" border="2" color="white">
+  <tr>
+   <td><button onclick="color('black')" style="background-color:black; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('blue')" style="background-color:blue; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('green')" style="background-color:green; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('AliceBlue')" style="background-color:AliceBlue; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('brown')" style="background-color: brown; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('BlueViolet')" style="background-color:BlueViolet ; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('Coral')" style="background-color:Coral; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('DarkOrchid')" style="background-color:DarkOrchid ; height: 25px; width: 25px;"></button></td>
+  </tr>
+ </table>
+ <table id="tab2" border="2" color="white">
+  <tr>
+   <td><button onclick="color('Orange')" style="background-color:Orange; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('Orchid')" style="background-color:Orchid; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('red')" style="background-color:red; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('purple')" style="background-color:purple; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('tan')" style="background-color:tan; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('teal')" style="background-color:teal; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('magenta')" style="background-color:magenta; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('palegreen')" style="background-color:palegreen; height: 25px; width: 25px;"></button></td>
+  </tr>
+ </table>
+ <table id="tab3" border="2" color="white">
+  <caption>Choose your color</caption>
+  <tr>
+   <td><button onclick="color('lime')" style="background-color:lime; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('limegreen')" style="background-color:limegreen; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('maroon')" style="background-color:maroon; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('MediumOrchid')" style="background-color:mediumorchid; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('MediumSeaGreen')" style="background-color:mediumseagreen; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('MidnightBlue')" style="background-color:midnightblue; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('orangered')" style="background-color:orangered; height: 25px; width: 25px;"></button></td>
+   <td><button onclick="color('yellow')" style="background-color:yellow; height: 25px; width: 25px;"></button></td>
+  </tr>
+ </table>
+<script type="text/javascript" 
+    src="paint.js"></script>
+</body>
+</html>
